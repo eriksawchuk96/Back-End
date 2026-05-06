@@ -9,6 +9,7 @@ const precio = producto.precio;
 const descuento = precio * 0.2;
 console.log("Descuento: " + descuento);
 console.log("Precio con Descuento: " + (precio - descuento));
+producto.precio = precio - descuento;
 if (producto.stock === 0) {
   producto.disponible = false;
 }
