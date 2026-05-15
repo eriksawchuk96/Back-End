@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mi Presentación</title>
+    <style>
+      /* --- ESTILOS CSS --- */
+
+      /* Reseteo básico para que todo se vea ordenado */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      /* Cuerpo de la página: Fondo blanco y tipografía limpia */
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #ffffff;
+        color: #333333;
+        line-height: 1.6;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+      }
+
+      /* Tarjeta de presentación */
+      .card {
+        background-color: #ffffff;
+        width: 90%;
+        max-width: 500px;
+        padding: 40px;
+        text-align: center;
+        border-radius: 15px;
+        /* Sombra azul suave para darle profundidad */
+        box-shadow: 0 10px 30px rgba(0, 82, 204, 0.15);
+        /* Borde superior grueso en azul para destacar */
+        border-top: 8px solid #0052cc;
+      }
+
+      /* Nombre en grande */
+      h1 {
+        color: #0052cc; /* Azul principal */
+        font-size: 2.5rem;
+        margin-bottom: 15px;
+      }
+
+      /* Breve descripción */
+      .descripcion {
+        font-size: 1.1rem;
+        color: #555555;
+        margin-bottom: 30px;
+      }
+
+      /* Sección de Hobbies */
+      .hobbies-titulo {
+        color: #0052cc;
+        font-size: 1.3rem;
+        margin-bottom: 15px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+
+      /* Lista de hobbies */
+      ul {
+        list-style: none; /* Quitamos los puntos por defecto */
+        padding: 0;
+      }
+
+      li {
+        background-color: #f0f5ff; /* Azul muy clarito para el fondo de los ítems */
+        color: #0052cc;
+        margin: 10px 0;
+        padding: 12px;
+        border-radius: 8px;
+        font-weight: 600;
+        transition: transform 0.2s;
+      }
+
+      /* Efecto sutil cuando pasás el mouse por arriba de un hobby */
+      li:hover {
+        transform: scale(1.03);
+        background-color: #e0ecff;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- --- ESTRUCTURA HTML --- -->
+    <div class="card">
+      <!-- Tu nombre en grande -->
+      <h1>[Tu Nombre Aquí]</h1>
+
+      <!-- Tu descripción -->
+      <p class="descripcion">
+        ¡Hola! Soy principiante en el mundo del desarrollo web. Me apasiona
+        aprender nuevas tecnologías y este es mi primer sitio web maquetado con
+        HTML y CSS.
+      </p>
+
+      <!-- Tus Hobbies -->
+      <h2 class="hobbies-titulo">Mis Hobbies</h2>
+      <ul>
+        <li>⚽ Jugar al fútbol</li>
+        <li>📚 Leer novelas de ciencia ficción</li>
+        <li>🎸 Tocar la guitarra</li>
+      </ul>
+    </div>
+  </body>
+</html>
