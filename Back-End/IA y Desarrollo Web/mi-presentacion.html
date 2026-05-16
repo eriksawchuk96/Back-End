@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mi Presentación</title>
+    <style>
+      /* --- ESTILOS CSS --- */
+
+      /* Reseteo básico */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      /* Fondo oscuro (negro mate) para un look moderno */
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #121212;
+        color: #ffffff;
+        line-height: 1.6;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+      }
+
+      /* Tarjeta de presentación */
+      .card {
+        background-color: #1e1e1e; /* Un gris casi negro para contrastar con el fondo */
+        width: 90%;
+        max-width: 500px;
+        padding: 40px;
+        text-align: center;
+        border-radius: 15px;
+        /* Sombra sutil para dar volumen */
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        /* Borde superior grueso en rojo vibrante */
+        border-top: 8px solid #ff3333;
+      }
+
+      /* Nombre en grande (Rojo) */
+      h1 {
+        color: #ff3333;
+        font-size: 2.5rem;
+        margin-bottom: 15px;
+        letter-spacing: -0.5px;
+      }
+
+      /* Breve descripción */
+      .descripcion {
+        font-size: 1.1rem;
+        color: #b3b3b3; /* Gris claro para que sea cómodo de leer */
+        margin-bottom: 30px;
+      }
+
+      /* Sección de Hobbies */
+      .hobbies-titulo {
+        color: #ffffff;
+        font-size: 1.3rem;
+        margin-bottom: 15px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+
+      /* Lista de hobbies */
+      ul {
+        list-style: none;
+        padding: 0;
+      }
+
+      li {
+        background-color: #2a2a2a; /* Fondo oscuro para los ítems */
+        color: #ff3333; /* Texto en rojo */
+        margin: 10px 0;
+        padding: 12px;
+        border-radius: 8px;
+        font-weight: 600;
+        border: 1px solid #333333;
+        transition: all 0.2s ease;
+      }
+
+      /* Efecto al pasar el mouse: se ilumina el borde en rojo */
+      li:hover {
+        transform: scale(1.03);
+        border-color: #ff3333;
+        background-color: #331a1a; /* Un toque de fondo rojizo oscuro */
+      }
+    </style>
+  </head>
+  <body>
+    <!-- --- ESTRUCTURA HTML --- -->
+    <div class="card">
+      <!-- Tu nombre en grande -->
+      <h1>[Tu Nombre Aquí]</h1>
+
+      <!-- Tu descripción -->
+      <p class="descripcion">
+        ¡Hola! Soy principiante en el mundo del desarrollo web. Me apasiona
+        aprender nuevas tecnologías y este es mi primer sitio web maquetado con
+        HTML y CSS usando un estilo oscuro.
+      </p>
+
+      <!-- Tus Hobbies -->
+      <h2 class="hobbies-titulo">Mis Hobbies</h2>
+      <ul>
+        <li>🎮 Jugar videojuegos</li>
+        <li>🎧 Escuchar música</li>
+        <li>🛹 Andar en skate</li>
+      </ul>
+    </div>
+  </body>
+</html>

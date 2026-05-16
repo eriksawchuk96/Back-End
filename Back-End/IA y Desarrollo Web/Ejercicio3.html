@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mi Portfolio Profesional</title>
+    <style>
+      /* --- ESTILOS CSS --- */
+
+      /* Reseteo básico */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      /* Ajuste del cuerpo para permitir scroll y ordenar en vertical */
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #121212;
+        color: #ffffff;
+        line-height: 1.6;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+
+      /* 1. BARRA DE NAVEGACIÓN (Navbar) */
+      header {
+        background-color: #1e1e1e;
+        position: sticky; /* Se queda fija arriba al hacer scroll */
+        top: 0;
+        z-index: 100;
+        border-bottom: 2px solid #ff3333;
+      }
+
+      nav {
+        max-width: 900px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 20px;
+      }
+
+      .logo {
+        font-weight: bold;
+        font-size: 1.2rem;
+        color: #ffffff;
+        text-decoration: none;
+      }
+
+      .logo span {
+        color: #ff3333;
+      }
+
+      .nav-links {
+        list-style: none;
+        display: flex;
+        gap: 20px;
+      }
+
+      .nav-links a {
+        color: #b3b3b3;
+        text-decoration: none;
+        font-size: 0.95rem;
+        font-weight: 500;
+        transition: color 0.2s;
+      }
+
+      .nav-links a:hover {
+        color: #ff3333; /* El enlace brilla en rojo al pasar el mouse */
+      }
+
+      /* CONTENEDOR PRINCIPAL */
+      main {
+        flex: 1; /* Empuja el footer hacia abajo si hay poco contenido */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 40px 20px;
+      }
+
+      /* TARJETA DE PRESENTACIÓN */
+      .card {
+        background-color: #1e1e1e;
+        width: 100%;
+        max-width: 600px;
+        padding: 40px;
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+        border-left: 5px solid #ff3333; /* Borde elegante a la izquierda */
+      }
+
+      /* Presentación */
+      h1 {
+        color: #ff3333;
+        font-size: 2.5rem;
+        margin-bottom: 15px;
+        letter-spacing: -0.5px;
+      }
+
+      .descripcion {
+        font-size: 1.05rem;
+        color: #b3b3b3;
+        margin-bottom: 30px;
+      }
+
+      /* Títulos de las secciones internas */
+      h2 {
+        color: #ffffff;
+        font-size: 1.3rem;
+        margin-bottom: 15px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        border-bottom: 1px solid #333333;
+        padding-bottom: 5px;
+      }
+
+      /* 2. SECCIÓN DE HABILIDADES (Tags de colores) */
+      .skills-container {
+        display: flex;
+        flex-wrap: wrap; /* Si no entran, bajan a la siguiente línea */
+        gap: 10px;
+        margin-bottom: 30px;
+      }
+
+      .skill-tag {
+        font-size: 0.85rem;
+        font-weight: 600;
+        padding: 6px 14px;
+        border-radius: 20px;
+        text-transform: uppercase;
+      }
+
+      /* Colores personalizados para las etiquetas de habilidades */
+      .html-tag {
+        background-color: #e34c26;
+        color: #ffffff;
+      }
+      .css-tag {
+        background-color: #264de4;
+        color: #ffffff;
+      }
+      .js-tag {
+        background-color: #f7df1e;
+        color: #000000;
+      }
+      .git-tag {
+        background-color: #f05032;
+        color: #ffffff;
+      }
+      .design-tag {
+        background-color: #ff3333;
+        color: #ffffff;
+      }
+
+      /* Lista de hobbies (Diseño limpio en línea) */
+      .hobbies-list {
+        list-style: none;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 10px;
+      }
+
+      .hobbies-list li {
+        background-color: #2a2a2a;
+        color: #b3b3b3;
+        padding: 10px;
+        border-radius: 8px;
+        font-size: 0.95rem;
+        text-align: center;
+        border: 1px solid #333333;
+        transition: all 0.2s ease;
+      }
+
+      .hobbies-list li:hover {
+        border-color: #ff3333;
+        color: #ffffff;
+        transform: translateY(-2px);
+      }
+
+      /* 3. FOOTER (Pie de página) */
+      footer {
+        background-color: #0a0a0a;
+        text-align: center;
+        padding: 20px;
+        font-size: 0.85rem;
+        color: #666666;
+        border-top: 1px solid #1e1e1e;
+      }
+
+      footer a {
+        color: #ff3333;
+        text-decoration: none;
+      }
+
+      footer a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 1. BARRA DE NAVEGACIÓN -->
+    <header>
+      <nav>
+        <a href="#" class="logo">Port<span>folio</span></a>
+        <ul class="nav-links">
+          <li><a href="#">Inicio</a></li>
+          <li><a href="#">Habilidades</a></li>
+          <li><a href="#">Hobbies</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main>
+      <div class="card">
+        <!-- Tu nombre en grande -->
+        <h1>[Tu Nombre Aquí]</h1>
+
+        <!-- Tu descripción -->
+        <p class="descripcion">
+          ¡Hola! Soy un apasionado desarrollador frontend en formación. Me
+          dedico a crear experiencias web modernas, limpias y eficientes
+          utilizando las últimas tecnologías de maquetación.
+        </p>
+
+        <!-- 2. SECCIÓN DE HABILIDADES -->
+        <h2>Habilidades</h2>
+        <div class="skills-container">
+          <span class="skill-tag html-tag">HTML5</span>
+          <span class="skill-tag css-tag">CSS3</span>
+          <span class="skill-tag js-tag">JavaScript</span>
+          <span class="skill-tag git-tag">Git & GitHub</span>
+          <span class="skill-tag design-tag">UI Design</span>
+        </div>
+
+        <!-- Tus Hobbies -->
+        <h2>Mis Hobbies</h2>
+        <ul class="hobbies-list">
+          <li>🎮 Videojuegos</li>
+          <li>🎧 Música</li>
+          <li>skateboarding</li>
+        </ul>
+      </div>
+    </main>
+
+    <!-- 3. FOOTER -->
+    <footer>
+      <p>© 2026 [Tu Nombre]. Creado con ❤️ usando HTML y CSS.</p>
+    </footer>
+  </body>
+</html>
