@@ -10,6 +10,15 @@ app.get("/sobre-mi", (req, res) => {
 app.get("/estado", (req, res) => {
   res.send("Ok");
 });
+app.get("/productos", (req, res) => {
+  res.send("Lista de productos");
+});
+app.post("/productos", (req, res) => {
+  res.send("Producto creado");
+});
+app.delete("/productos", (req, res) => {
+  res.send("Producto eliminado");
+});
 app.listen(PORT, () => {
   console.log(`Servidor corriendo en http://localhost:${PORT}`);
 });
