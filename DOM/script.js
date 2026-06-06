@@ -1,0 +1,14 @@
+const titulo1 = document.querySelector("h1");
+titulo1.textContent = "Esto es un título modificado por JavaScript";
+const elTitulo = document.getElementById("titulo");
+console.log("Elemento h1 seleccionado por ID:", elTitulo);
+const titulo2 = document.querySelector("#titulo");
+console.log(titulo2);
+const primerParrafo = document.querySelector(".texto");
+console.log("Primer párrafo encontrado:", primerParrafo);
+const todosLosParrafos = document.querySelectorAll(".texto");
+console.log("Cantidad de párrafos encontrados:", todosLosParrafos.length);
+const parrafo = document.getElementById("resultado");
+console.log("Contenido original:", parrafo.textContent);
+parrafo.textContent = "Texto modificado con JS";
+parrafo.innerHTML = "<strong>Texto modificado</strong>";
